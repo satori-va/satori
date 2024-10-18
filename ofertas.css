@@ -172,12 +172,20 @@ select {
 
 /* Estilos responsive */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 120px; /* Aumentar el padding para que no cubra el footer */
+    }
+
     .productos {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets y móviles */
     }
 }
 
 @media (max-width: 480px) {
+    body {
+        padding-bottom: 120px; /* Aumentar el padding para que no cubra el footer */
+    }
+
     .productos {
         grid-template-columns: repeat(1, 1fr); /* Una columna en móviles */
     }
@@ -229,7 +237,8 @@ select {
     cursor: pointer;
 }
 
-.cerrar:hover, .cerrar:focus {
+.cerrar:hover,
+.cerrar:focus {
     color: #ccc;
 }
 
