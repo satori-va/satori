@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/demosprojects/imagenes/main/favicon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/favicon.jpg" alt="Logo SATORI" class="logo-imagen">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+        <div class="icono-carrito" onclick="toggleCarrito()">
+            🛒<span id="contador-carrito">(0)</span>
+        </div>
+    </header>
+
+    <!-- Carrito emergente -->
+    <div id="carrito-popup" class="carrito-popup">
+        <div class="carrito-contenido">
+            <h2>Carrito</h2>
+            <ul id="lista-carrito">
+                <li>No hay productos en el carrito.</li>
+            </ul>
+            <p id="total-carrito">Total: $0.00</p>
+            <a id="enviarWhatsapp" href="#" class="btn-whatsapp" target="_blank">Enviar por WhatsApp</a>
+            <button onclick="toggleCarrito()" class="btn-cerrar">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Sección de productos -->
+    <section id="productos" class="productos">
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/combotododia.jpeg" alt="combotododia" onclick="ampliarImagen(this)">
+            <h2>Combo TodoDia Hojas de limón y guanabána</h2>
+            <p>Jabones x5, Crema corporal, Bodysplash, Hidratante para pies, Repuesto crema corporal</p>
+            <p class="precio">$28.800</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Combo TodoDia Hojas de limón y guanabána', 28800)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/ekoscombo.jpg" alt="Ekos combo maracuya" onclick="ampliarImagen(this)">
+            <h2>Ekos combo maracuya</h2>
+            <p>Jabones x4, Oleo trifasico corporal</p>
+            <p class="precio">$16.500</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Ekos combo maracuya', 16500)">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <!-- Modal para ampliar imagen -->
+    <div id="modal" class="modal" onclick="cerrarImagen()">
+        <span class="cerrar" onclick="cerrarImagen()">&times;</span>
+        <img class="modal-contenido" id="imagen-ampliada">
+    </div>
+
+    <!-- Footer fijo -->
+    <footer>
+        <p>&copy; 2024 Satori - Villa Ángela/Chaco</p>
+        <p>Redes sociales:
+            <a href="https://instagram.com/satori.va" target="_blank" class="icon-link">
+                <img src="contactoig.png" alt="Instagram" style="width: 24px; vertical-align: middle;">
+            </a>
+            |
+            <a href="https://wa.me/5493735417958" target="_blank" class="icon-link">
+                <img src="whatsapp.png" alt="WhatsApp" style="width: 24px; vertical-align: middle;">
+            </a>
+        </p>
+    </footer>
+    
+    <style>
+        .icon-link {
+            text-decoration: none; /* Elimina el subrayado del enlace */
+        }
+    </style>
+    <script src="script.js"></script>
+    <script>
+        // Función para abrir el modal y mostrar la imagen ampliada
+        function ampliarImagen(img) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("imagen-ampliada");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        // Función para cerrar el modal
+        function cerrarImagen() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

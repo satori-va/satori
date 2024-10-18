@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Satori/Natura</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/demosprojects/imagenes/main/favicon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/favicon.jpg" alt="Logo SATORI" class="logo-imagen">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+        <div class="icono-carrito" onclick="toggleCarrito()" aria-label="Ver carrito" title="Ver carrito">
+            🛒<span id="contador-carrito">(0)</span>
+        </div>
+    </header>
+
+    <!-- Ventana emergente del carrito -->
+    <div id="carrito-popup" class="carrito-popup">
+        <div class="carrito-contenido">
+            <h2>Carrito</h2>
+            <ul id="lista-carrito">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </ul>
+            <p id="total-carrito">Total: $0.00</p>
+            <a id="enviarWhatsapp" href="#" class="btn-whatsapp" target="_blank">Enviar por WhatsApp</a>
+            <button onclick="toggleCarrito()" class="btn-cerrar">Cerrar</button>
+        </div>
+    </div>
+    
+    <!-- Sección de productos -->
+    <section id="productos" class="productos">
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/ervadoce.jpg" alt="Desodorante" onclick="abrirImagen(this.src)">
+            <h2>Roll on ErvaDoce</h2>
+            <p class="precio">$4.300</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Roll on ErvaDoce', 4300)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/tododia.jpg" alt="BodySplash" onclick="abrirImagen(this.src)">
+            <h2>BodySplash TodoDia (Hojas de limón y guanabána)</h2>
+            <p class="precio">$17.800</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('BodySplash TodoDia (Hojas de limón y guanabána)', 17800)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/tododiacremapies.jpeg" alt="CremaPies" onclick="abrirImagen(this.src)">
+            <h2>TodoDia hidratante para pies</h2>
+            <p class="precio">$5.750</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('TodoDia hidratante para pies', 5750)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/patauaacondicionador.jpeg" alt="Pataua Acondicionador Repuesto" onclick="abrirImagen(this.src)">
+            <h2>Pataua Acondicionador Repuesto</h2>
+            <p class="precio">$6.850</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Pataua Acondicionador Repuesto', 6850)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/tododiajabonliquido.jpeg" alt="TodoDia jabón líquido corporal" onclick="abrirImagen(this.src)">
+            <h2>TodoDia jabón líquido corporal</h2>
+            <p class="precio">$6.990</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('TodoDia jabón líquido corporal', 6990)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/perfumeliberta.jpeg" alt="Perfume Humor Liberta" onclick="abrirImagen(this.src)">
+            <h2>Perfume Humor Liberta</h2>
+            <p class="precio">$24.900</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Perfume Humor Liberta', 24900)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/jabon.jpeg" alt="jabón liquido para manos ErvaDoce" onclick="abrirImagen(this.src)">
+            <h2>jabón liquido para manos ErvaDoce</h2>
+            <p class="precio">$8.500</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('jabón liquido para manos ErvaDoce', 8500)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/luminaspray.jpeg" alt="Spray para peinar Lumina" onclick="abrirImagen(this.src)">
+            <h2>Spray para peinar Lumina</h2>
+            <p class="precio">$10.700</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Spray para peinar Lumina', 10700)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/jabonesx5.jpg" alt="Jabones tododia caja x5" onclick="abrirImagen(this.src)">
+            <h2>Jabones tododia caja x5</h2>
+            <p class="precio">$6.850</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Jabones tododia caja x5', 6850)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/cremacorporal.jpg" alt="Crema corporal Hojas de limón y guanábana" onclick="abrirImagen(this.src)">
+            <h2>TodoDia Crema corporal Hojas de limón y guanábana</h2>
+            <p class="precio">$10.800</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Crema corporal Hojas de limón y guanábana', 10800)">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <!-- Modal para ampliar imagen -->
+    <div id="modal" class="modal" onclick="cerrarImagen()">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imagen-ampliada">
+    </div>
+
+    <footer class="footer-hidden">
+        <p>&copy; 2024 Satori - Villa Ángela/Chaco</p>
+        <p>Redes sociales:
+            <a href="https://instagram.com/satori.va" target="_blank" class="icon-link">
+                <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/contactoig.png" alt="Instagram" style="width: 24px; vertical-align: middle;">
+            </a>
+            |
+            <a href="https://wa.me/5493735417958" target="_blank" class="icon-link">
+                <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/whatsapp.png" alt="WhatsApp" style="width: 24px; vertical-align: middle;">
+            </a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const footer = document.querySelector('footer');
+    
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+    
+            // Si el usuario ha llegado al final de la página, muestra el footer
+            if (scrollTop + windowHeight >= documentHeight) {
+                footer.classList.add('footer-visible'); // Muestra el footer
+            }
+        });
+    </script>  
+</body>
+</html>
+
+
+
+
+
