@@ -279,11 +279,14 @@ select {
 footer {
     background-color: #333; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
-    padding: 20px 10px;
+    padding: 10px 5px;
     text-align: center;
     border-top: 4px solid #ff7e5f; /* Línea superior en color llamativo */
     font-size: 0.9rem;
-    position: relative;
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    z-index: 10;
 }
 
 /* Estilo de los enlaces en el footer */
@@ -320,10 +323,6 @@ footer a:hover {
     margin-top: 15px;
     font-size: 0.8rem;
     color: #bbb;
-}
-
-.footer-visible {
-    opacity: 1; /* Hace el footer visible */
 }
 
 /* Solución para evitar el desbordamiento del body */
