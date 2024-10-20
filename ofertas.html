@@ -52,6 +52,13 @@
             <p class="precio">$16.500</p>
             <button class="btn-agregar" onclick="agregarAlCarrito('Ekos combo maracuya', 16500)">Agregar al carrito</button>
         </div>
+        <div class="producto">
+            <img src="lumina.png" alt="Spray para peinar Lumina" onclick="abrirImagen(this.src)">
+            <h2>Spray para peinar Lumina</h2>
+            <p class="precio">$10.700</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Spray para peinar Lumina', 10700)">Agregar al carrito</button>
+        </div>
+        
     </section>
 
     <!-- Modal para ampliar imagen -->
@@ -60,8 +67,7 @@
         <img class="modal-contenido" id="imagen-ampliada">
     </div>
 
-    <!-- Footer fijo -->
-    <footer>
+    <footer class="footer-hidden">
         <p>&copy; 2024 Satori - Villa Ángela/Chaco</p>
         <p>Redes sociales:
             <a href="https://instagram.com/satori.va" target="_blank" class="icon-link">
@@ -74,11 +80,6 @@
         </p>
     </footer>
     
-    <style>
-        .icon-link {
-            text-decoration: none; /* Elimina el subrayado del enlace */
-        }
-    </style>
     <script src="script.js"></script>
     <script>
         // Función para abrir el modal y mostrar la imagen ampliada
@@ -95,5 +96,20 @@
             modal.style.display = "none";
         }
     </script>
+    <script>
+        const footer = document.querySelector('footer');
+    
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+    
+            // Si el usuario ha llegado al final de la página, muestra el footer
+            if (scrollTop + windowHeight >= documentHeight) {
+                footer.classList.add('footer-visible'); // Muestra el footer
+            }
+        });
+    </script>  
+        
 </body>
 </html>
