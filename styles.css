@@ -44,15 +44,19 @@ nav {
 .nav-list a {
     text-decoration: none;
     font-weight: bold;
-    color: #333;
+    color: #white;
     padding: 8px;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.nav-list a:hover {
+    background-color: #ff5a5f;
+    transform: scale(1.1);
+}
 /* Icono del carrito de compras */
 .icono-carrito {
     font-size: 20px;
     cursor: pointer;
+    color: white;
 }
 
 .icon-link {
@@ -65,7 +69,7 @@ nav {
     right: -100%; /* Inicialmente oculto fuera de la vista */
     width: 300px;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 8px;
     z-index: 1000;
@@ -98,6 +102,10 @@ select {
 .carrito-contenido h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #ff7e5f;
+    padding-bottom: 10px;
 }
 
 #lista-carrito li {
