@@ -67,18 +67,69 @@ nav {
 .carrito-popup {
     position: fixed;
     top: 50px;
-    right: -100%; /* Inicialmente oculto fuera de la vista */
+    right: -100%;
     width: 300px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 8px;
     z-index: 1000;
-    transition: right 0.3s ease; /* Animación de deslizamiento suave */
+    transition: right 0.3s ease;
 }
 
 .carrito-popup.mostrar {
-    right: 30px; /* Desplazar dentro de la vista cuando se muestre */
+    right: 30px;
+}
+
+.carrito-popup h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #ff7e5f;
+    padding-bottom: 10px;
+}
+
+/* Estilos para los elementos del carrito */
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#lista-carrito img {
+    width: 50px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+#lista-carrito .nombre-producto {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+#lista-carrito .cantidad {
+    font-size: 1rem;
+    color: #777;
+    margin-right: 10px;
+}
+
+#lista-carrito .precio-producto {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745;
 }
 .descuento {
     font-family: 'Times New Roman', Times, serif;
@@ -100,21 +151,6 @@ select {
     max-width: 100px; /* Limitar el ancho de la imagen */
 }
 
-.carrito-contenido h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-    text-align: center;
-    border-bottom: 2px solid #ff7e5f;
-    padding-bottom: 10px;
-}
-
-#lista-carrito li {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
-}
 
 #lista-carrito li button {
     background-color: #dc3545;
@@ -295,11 +331,6 @@ body {
     margin: 0; /* Elimina márgenes adicionales */
     overflow-x: hidden; /* Evita desbordamiento horizontal */
 }
-
-
-
-
-
 /* Ajustes para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     footer {
