@@ -13,8 +13,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 8px 16px;
-    background-color: linear-gradient(90deg, #ff7e5f, #feb47b);
-    box-shadow: 0 2px 1px rgb(0, 0, 0, 0.1);
+    background-color: #ff7e5f; /* Color sólido */
+    background-image: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradiente opcional */
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo */
