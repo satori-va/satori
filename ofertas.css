@@ -13,8 +13,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 8px 16px;
-    background-color: linear-gradient(90deg, #ff7e5f, #feb47b);
-    box-shadow: 0 2px 1px rgb(0, 0, 0, 0.1);
+    background-color: #ff7e5f; /* Color sólido */
+    background-image: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradiente opcional */
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo */
@@ -44,7 +45,7 @@ nav {
 .nav-list a {
     text-decoration: none;
     font-weight: bold;
-    color: #white;
+    color: white;
     padding: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -52,6 +53,7 @@ nav {
     background-color: #ff5a5f;
     transform: scale(1.1);
 }
+
 /* Icono del carrito de compras */
 .icono-carrito {
     font-size: 20px;
@@ -62,6 +64,7 @@ nav {
 .icon-link {
     text-decoration: none; /* Elimina el subrayado del enlace */
 }
+
 /* Carrito emergente */
 .carrito-popup {
     position: fixed;
@@ -79,9 +82,11 @@ nav {
 .carrito-popup.mostrar {
     right: 30px; /* Desplazar dentro de la vista cuando se muestre */
 }
+
 .descuento {
     font-family: 'Times New Roman', Times, serif;
 }
+
 select {
     padding: 10px;
     border: 1px solid #ccc;
@@ -202,6 +207,7 @@ select {
     width: 100%;
     height: auto;
 }
+
 /* Estilos del modal */
 .modal {
     display: none;
@@ -242,11 +248,14 @@ select {
 footer {
     background-color: #333; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
-    padding: 20px 10px;
+    padding: 10px 5px;
     text-align: center;
     border-top: 4px solid #ff7e5f; /* Línea superior en color llamativo */
     font-size: 0.9rem;
-    position: relative;
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    z-index: 10;
 }
 
 /* Estilo de los enlaces en el footer */
@@ -285,20 +294,6 @@ footer a:hover {
     color: #bbb;
 }
 
-.footer-visible {
-    opacity: 1; /* Hace el footer visible */
-}
-
-/* Solución para evitar el desbordamiento del body */
-body {
-    margin: 0; /* Elimina márgenes adicionales */
-    overflow-x: hidden; /* Evita desbordamiento horizontal */
-}
-
-
-
-
-
 /* Ajustes para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     footer {
@@ -311,3 +306,4 @@ body {
         padding-bottom: 80px; /* Añadir un padding inferior para evitar que el footer cubra los productos */
     }
 }
+
