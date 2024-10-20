@@ -36,7 +36,14 @@
         </div>
     </div>
     
-    <!-- Sección de productos -->
+    
+
+    <!-- Modal para ampliar imagen -->
+    <div id="modal" class="modal" onclick="cerrarImagen()">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imagen-ampliada">
+    </div>
+<!-- Sección de productos -->
     <section id="productos" class="productos">
         <div class="producto">
             <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/rollonblanco.jpg" alt="Desodorante" onclick="abrirImagen(this.src)">
@@ -69,16 +76,16 @@
             <button class="btn-agregar" onclick="agregarAlCarrito('Ekos repuesto acondicionador Patauá', 6850)">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/jabonliquidotedemanzanillaylavanda.jpg" alt="TodoDia jabón líquido corporal" onclick="abrirImagen(this.src)">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/byncremacorporal.jpg" alt="TodoDia jabón líquido corporal" onclick="abrirImagen(this.src)">
             <h2>Tododia jabón líquido corporal Té de manzanilla y lavanda</h2>
-            <p class="precio">$6.990</p>
-            <button class="btn-agregar" onclick="agregarAlCarrito('Tododia jabón líquido corporal Té de manzanilla y lavanda', 6990)">Agregar al carrito</button>
+            <p class="precio">NO DISPONIBLE</p>
+            <button class="btn-agregar" >Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/liberta.jpg" alt="Perfume Humor Liberta" onclick="abrirImagen(this.src)">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/bynliberta.jpg" alt="Perfume Humor Liberta" onclick="abrirImagen(this.src)">
             <h2>Perfume Humor Liberta</h2>
-            <p class="precio">$24.900</p>
-            <button class="btn-agregar" onclick="agregarAlCarrito('Perfume Humor Liberta', 24900)">Agregar al carrito</button>
+            <p class="precio">NO DISPONIBLE</p>
+            <button class="btn-agregar" >Agregar al carrito</button>
         </div>
         <div class="producto">
             <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/jabonervadoce.jpg" alt="jabón liquido para manos ErvaDoce" onclick="abrirImagen(this.src)">
@@ -86,7 +93,12 @@
             <p class="precio">$8.500</p>
             <button class="btn-agregar" onclick="agregarAlCarrito('Jabón liquido para manos ErvaDoce', 8500)">Agregar al carrito</button>
         </div>
-       
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/lumina.png" alt="Spray para peinar Lumina" onclick="abrirImagen(this.src)">
+            <h2>Spray para peinar Lumina</h2>
+            <p class="precio">$10.700</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Spray para peinar Lumina', 10700)">Agregar al carrito</button>
+        </div>
         <div class="producto">
             <img src="https://raw.githubusercontent.com/demosprojects/imagenes/main/jabonesx5tododiapequeño.jpg" alt="Jabones tododia caja x5" onclick="abrirImagen(this.src)">
             <h2>Jabones tododia caja x5 Hojas de limón y guanabána</h2>
@@ -100,13 +112,6 @@
             <button class="btn-agregar" onclick="agregarAlCarrito('Tododia crema corporal Hojas de limón y guanábana', 10800)">Agregar al carrito</button>
         </div>
     </section>
-
-    <!-- Modal para ampliar imagen -->
-    <div id="modal" class="modal" onclick="cerrarImagen()">
-        <span class="cerrar">&times;</span>
-        <img class="modal-contenido" id="imagen-ampliada">
-    </div>
-
     <footer class="footer-hidden">
         <p>&copy; 2024 Satori - Villa Ángela/Chaco</p>
         <p>Redes sociales:
