@@ -238,20 +238,51 @@ select {
     color: #ccc;
 }
 
-
+/* Footer */
 footer {
-    background-color: #f8f9fa; /* Color de fondo del footer */
-    padding: 10px; /* Añade padding */
-    text-align: center; /* Centra el contenido del footer */
-    border-top: 1px solid #ddd; /* Añade una línea divisoria */
-    
-    width: 100%;
-    font-size: 14px; /* Reducir el tamaño del texto en móviles */
-    transition: opacity 0.3s ease-in-out; /* Transición suave para mostrar/ocultar */
-    opacity: 0; /* Oculta el footer inicialmente */
-    
-    /* Evita el desbordamiento horizontal */
-    overflow: hidden;
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 10px;
+    text-align: center;
+    border-top: 4px solid #ff7e5f; /* Línea superior en color llamativo */
+    font-size: 0.9rem;
+    position: relative;
+}
+
+/* Estilo de los enlaces en el footer */
+footer a {
+    color: #ff7e5f; /* Color llamativo para los enlaces */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd1b3; /* Color más claro al pasar el ratón */
+}
+
+/* Iconos sociales */
+.footer-icons {
+    margin: 20px 0;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #ff7e5f;
+    transform: scale(1.1); /* Animación al pasar el ratón */
+}
+
+/* Texto adicional */
+.footer-text {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #bbb;
 }
 
 .footer-visible {
