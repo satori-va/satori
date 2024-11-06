@@ -6,7 +6,35 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+/* Estilo para el cargador */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Fondo blanco */
+    z-index: 9999; /* Para que esté sobre el contenido */
+}
 
+/* Estilo para el SVG (cargador) */
+.spinner {
+    width: 50px; /* Ajusta el tamaño del SVG */
+    height: 50px;
+}
+
+/* Estilo para el contenido */
+.hidden {
+    display: none; /* Ocultar contenido al inicio */
+}
+
+/* Estilo para mostrar el contenido después de la carga */
+.show {
+    display: block;
+}
 /* Header */
 header {
     display: flex;
