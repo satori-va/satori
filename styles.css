@@ -379,18 +379,19 @@ body {
         padding-bottom: 80px; /* Añadir un padding inferior para evitar que el footer cubra los productos */
     }
 }
+
 .video-container {
     text-align: center;
     margin: 20px 0;
   }
   
-  .video-container video {
+.video-container video {
     width: 100%; /* Ajusta al ancho del contenedor */
     max-width: 700px; /* Tamaño máximo opcional */
     border-radius: 8px; /* Esquinas redondeadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
   }
-  
+
 
 
 
