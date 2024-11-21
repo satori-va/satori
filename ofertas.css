@@ -196,17 +196,26 @@ select {
 }
 
 .btn-whatsapp {
-    display: block;
+    display: flex; /* Para alinear icono y texto en línea */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
     width: 100%;
     background-color: #25D366;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 12px 0;
+    border: none;
     text-decoration: none;
     border-radius: 5px;
     margin-bottom: 10px;
+    font-size: 16px;
+    gap: 8px; /* Espaciado entre el ícono y el texto */
 }
 
+.icono-whatsapp {
+    width: 20px; /* Ajusta el tamaño del ícono */
+    height: 20px;
+}
 .btn-cerrar {
     display: block;
     width: 100%;
