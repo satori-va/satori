@@ -2,7 +2,7 @@
 let carrito = [];
 
 // Número de WhatsApp al que se enviará el mensaje (en formato internacional)
-const numeroWhatsApp = "5493735417958"; // Reemplaza con el número deseado
+const numeroWhatsApp = "5493644539325"; // Reemplaza con el número deseado
 
 // Función para cargar el carrito desde localStorage
 function cargarCarrito() {
