@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="ofertas.css"> 
 </head>
 <body>
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
     <!-- Cargador SVG -->
      <div id="loader" class="loader">
         <svg fill="#D30392FF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="spinner">
@@ -155,6 +156,24 @@
     }, 1000); // 1000 ms = 1 segundos de espera
 };
     </script>
-        
+    <script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.style.display = "flex";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
+</script>
+
 </body>
 </html>
