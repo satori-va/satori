@@ -32,7 +32,6 @@ function cerrarImagen() {
     modal.style.display = 'none';
 }
 
-
 // Función para agregar un producto al carrito
 function agregarAlCarrito(nombreProducto, precio) {
     // Verificar si el producto ya existe en el carrito
@@ -159,5 +158,23 @@ document.getElementById('enviarWhatsapp').onclick = enviarPorWhatsApp;
 // Cargar el carrito al cargar la página
 document.addEventListener('DOMContentLoaded', cargarCarrito);
 
+// Función para verificar la visibilidad del footer
+function checkFooterVisibility() {
+    const mainContainer = document.querySelector('.main-container'); // Asegúrate de que esta clase esté en el contenedor principal
+    const footer = document.querySelector('footer');
+    const mainHeight = mainContainer.offsetHeight;
+    const windowHeight = window.innerHeight;
+
+    // Si el contenedor principal no ocupa toda la altura de la ventana, muestra el footer
+    if (mainHeight < windowHeight) {
+        footer.classList.add('footer-visible'); // Muestra el footer
+    } else {
+        footer.classList.remove('footer-visible'); // Oculta el footer
+    }
+}
+
+// Ejecutar al cargar la página y al redimensionar
+window.addEventListener('load', checkFooterVisibility);
+window.addEventListener('resize', checkFooterVisibility);
 
 
